@@ -1,0 +1,36 @@
+* {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 16px !important;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+.text-orange-color {
+  color: rgba(254, 55, 50, 1);
+}
+.above-the-fold-spacer {
+  height: 100vh;
+  /* Span from the first to the last grid column line */
+  /* (Negative numbers count from the end of the grid) */
+  grid-column: 1 / -1;
+  /* Start at the first grid row line, and take up 2 rows */
+  grid-row: 1 / span 2;
+}
+.hero {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.bg-button {
+  background-color: rgba(254, 55, 50, 1);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.form-control:focus {
+  border-color: rgba(254, 55, 50, 1);
+  box-shadow: none;
+}

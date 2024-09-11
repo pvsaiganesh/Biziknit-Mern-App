@@ -1,0 +1,11 @@
+.bg-8 {
+  background-image: url(../assets/blogs.svg);
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
