@@ -9,13 +9,11 @@ const BlogsPage = () => {
   return (
     <div className="hero">
       <Navbar />
-      <div className="hero bg-8 d-flex flex-column justify-content-center align-items-center">
-        <div style={{ position: "relative" }} className="svg-props">
+      <div className="bg-8 d-flex flex-column justify-content-center align-items-center">
+        <div className="svg-props position-relative">
           <Splash />
         </div>
-        <div style={{ position: "absolute" }} className="heading-text">
-          Blogs
-        </div>
+        <div className="heading-text position-absolute">Blogs</div>
       </div>
       <div>
         <Blogs />

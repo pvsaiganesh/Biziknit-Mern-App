@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./home-components/navbar";
 import { useParams } from "react-router-dom";
 import BlogPage from "./blogpage";
+import Footer from "./footer";
 
 const BlogLinks = () => {
   const params = useParams();
@@ -11,6 +12,7 @@ const BlogLinks = () => {
       <div className="hero">
         <BlogPage blogId={params.blogId} />
       </div>
+      <Footer />
     </>
   );
 };

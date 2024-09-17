@@ -17,13 +17,13 @@ import Navbar from "./home-components/navbar.js";
 
 const Home = () => {
   return (
-    <>
+    <div className="hero">
       <Navbar />
-      <div id="home" className="hero">
-        <div className="bg-2 p-5 pt-0 pb-0 ps-5 pe-5  gap-0 container-fluid d-flex flex-column  justify-content-center align-items-end ">
-          <div className="row align-items-end">
-            <div className="text-light text-center text-md-start d-flex flex-row justify-content-center align-items-baseline ">
-              <div className="align-self-center text-center text-md-start pe-5">
+      <div id="home">
+        <div className="bg-2 p-2 p-md-5 pt-md-0 pb-md-0 ps-md-5 pe-md-5  gap-0 container-fluid">
+          <div className="row  d-flex flex-row jusity-content-center aling-items-center">
+            <div className="text-light text-center text-md-start col-12 col-md-8 align-self-center">
+              <div className=" pe-0 pe-md-5">
                 <p className="fs-1 fw-bold">
                   Connect, Collaborate, and Conquer Market with Biziknit
                 </p>
@@ -33,16 +33,19 @@ const Home = () => {
                   for you!
                 </p>
                 <p>
-                  <button type="button" className="btn btn-outline-light">
+                  <button
+                    type="button"
+                    className="btn btn-outline-light ps-5 pe-5 pt-2 pb-2 fw-bold"
+                  >
                     Join Now
                   </button>
                 </p>
               </div>
-              <div className=" d-none d-md-block  d-flex flex-column justify-content-start align-items-baseline ">
-                <img src={worker} alt="worker" className="img-fluid worker" />
-              </div>
             </div>
-            <div className="align-self-center d-none d-md-block  rounded-3 rounded-bottom-0 infos-container  p-4 ps-5 pe-5 mb-0 w-100">
+            <div className=" d-none d-md-block  col-4 text-start align-self-end">
+              <img src={worker} alt="worker" className="img-fluid worker" />
+            </div>
+            <div className="align-self-center d-none d-md-block  rounded-3 rounded-bottom-0 infos-container p-2 p-md-4 ps-md-5 pe-md-5 mb-0 w-100">
               <div className="d-flex flex-row justify-content-around align-items-center">
                 <SmallInfoCard number={"10+"} title={"Businesses"} />
                 <SmallInfoCard number={"20+"} title={"Years of Experience"} />
@@ -52,7 +55,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="align-self-center d-md-none  bg-white   p-4 ps-5 pe-5 mb-0 w-100">
+        <div className="align-self-center d-md-none  bg-white   p-0 p-md-4 ps-md-5 pe-md-5 mb-0 w-100">
           <div className="d-flex flex-row justify-content-around align-items-center">
             <SmallInfoCard
               number={"10+"}
@@ -88,7 +91,7 @@ const Home = () => {
         <ReadyCard />
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

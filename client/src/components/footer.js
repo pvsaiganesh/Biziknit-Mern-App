@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/bizikintlogo.svg";
+import Logo from "../assets/biziknitlogo.svg";
 import "./home-components/joinus.js";
 import Social from "./home-components/soical.js";
 import logo from "../assets/logo-white.svg";
@@ -7,15 +7,17 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="p-5 bg-5">
+    <div className="p-2 p-md-5 bg-5 mt-5">
       <div className="flex-fill text-center">
-        <img src={Logo} alt="img" className="img-fluid " />
+        <Link to="/">
+          <img src={Logo} alt="img" className="img-fluid " />
+        </Link>
       </div>
-      <Social styles={"text-end p-5 w-20"} />
+      <Social styles={"text-end pt-1 pb-0 p-5 w-20"} />
       <hr className="bg-white" />
       <div className="container">
         <div className="row text-white">
-          <div className="p-3 reachus text-start d-flex flex-column col-12 col-md-4 col-lg-4">
+          <div className="p-3 reachus text-start d-flex flex-column col-6 col-md-4 col-lg-4">
             <p className="fs-6 fw-bold">Reach us</p>
             <p className="pb-3">
               <span>
@@ -68,7 +70,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="p-3 pages d-flex flex-column  col-12 col-md-2 col-lg-2">
+          <div className="p-3 pages d-flex flex-column  col-6 col-md-2 col-lg-2">
             <p className="fs-6 fw-bold ">Pages</p>
             <Link to="/" className="text-decoration-none text-white pb-3">
               <p className="fs-6">Home</p>
@@ -90,15 +92,17 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="p-3 legal d-flex flex-column col-12 col-md-2 col-lg-2">
+          <div className="p-3 legal d-flex flex-column col-6 col-md-2 col-lg-2">
             <p className="fs-6 fw-bold">Legal</p>
             <p className="fs-6 pb-3">Privacy Policy</p>
             <p className="fs-6 pb-3">Terms and Services</p>
             <p className="fs-6 pb-3">Terms of Use</p>
           </div>
 
-          <div className="p-3 subscribe col-12 col-md-4 col-lg-4">
-            <p className="fs-4 fw-bold ">Subscribe to our newsletter</p>
+          <div className="p-3 subscribe d-none d-md-block col-md-4 col-lg-4">
+            <p className="fs-4 fw-bold mb-0 pb-0 ">
+              Subscribe to our newsletter
+            </p>
             <p className="fs-6 pb-3">Be the first to receive any new updated</p>
             <div className="input-group mb-3">
               <input
@@ -109,7 +113,7 @@ const Footer = () => {
                 aria-describedby="button-addon2"
               />
               <button
-                className="btn bg-button"
+                className="btn bg-button ps-5 pe-5 pt-2 pb-2"
                 type="button"
                 id="button-addon2"
               >
@@ -117,15 +121,21 @@ const Footer = () => {
               </button>
             </div>
           </div>
+          <div className="p-3 legal d-md-none d-flex flex-column col-6 col-md-2 col-lg-2">
+            <p className="fs-6 fw-bold">Businesses</p>
+            <p className="fs-6 pb-3">Vasmi Group</p>
+            <p className="fs-6 pb-3">JS Insurance</p>
+            <p className="fs-6 pb-3">AGV</p>
+          </div>
         </div>
       </div>
-      <div className="text-center text-white flex-grow-1">
+      <p className="d-none d-md-block position-relative text-white text-center fw-bold">
         Biziknit © 2024. All Rights Reserved
-      </div>
-      <div className="text-end text-white ">
-        A Product From
-        <img src={logo} alt="logo" />
-      </div>
+        <span className="text-white position-absolute end-0 top-100">
+          A Product From
+          <img src={logo} alt="logo" className="ps-2" />
+        </span>
+      </p>
     </div>
   );
 };

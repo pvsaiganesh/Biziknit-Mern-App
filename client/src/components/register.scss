@@ -9,6 +9,7 @@
   vertical-align: middle;
   font-weight: 100;
   font-family: "Open Sans";
+  opacity: 0.5;
 }
 .bg-3 {
   background: linear-gradient(101.48deg, #fe3732 30.86%, #fa5209 70.68%);
@@ -37,6 +38,7 @@
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgba(255, 255, 255, 1);
   vertical-align: middle;
+  opacity: 0.5;
 }
 @media screen and (max-width: 680px) {
   .register-text-width {

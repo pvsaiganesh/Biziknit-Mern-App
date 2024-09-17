@@ -1,11 +1,26 @@
+@font-face {
+  font-family: "sansation-font"; /*Can be any text*/
+  src: local("Sansation"),
+    url(../fonts/Sansation_Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "mont-serret"; /*Can be any text*/
+  src: local("Montserret"),
+    url(../fonts/Montserrat-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "open-sans"; /*Can be any text*/
+  src: local("Open-Sans"), url(../fonts/OpenSans-Regular.ttf) format("truetype");
+}
 * {
-  font-family: "Open Sans", sans-serif !important;
-  font-size: 16px !important;
+  font-family: "sansation-font" !important;
+  font-size: 20px !important;
 }
 
 .App {
   display: grid;
   grid-template-rows: min-content 1fr;
+  max-width: 100vw;
 }
 
 .text-orange-color {
@@ -19,12 +34,20 @@
   /* Start at the first grid row line, and take up 2 rows */
   grid-row: 1 / span 2;
 }
+
+.headings {
+  font-family: "open-sans" !important;
+}
+
 .hero {
   grid-column-start: 1;
   grid-row-start: 2;
 }
+.bg {
+  background: linear-gradient(101.48deg, #fe3732 30.86%, #fa5209 70.68%);
+}
 .bg-button {
-  background-color: rgba(254, 55, 50, 1);
+  background: linear-gradient(101.48deg, #fe3732 30.86%, #fa5209 70.68%);
   color: white;
   border: none;
   border-radius: 10px;
@@ -33,4 +56,32 @@
 .form-control:focus {
   border-color: rgba(254, 55, 50, 1);
   box-shadow: none;
+}
+.btn:focus {
+  border-color: rgba(254, 55, 50, 1);
+  box-shadow: none;
+}
+.form-select:focus {
+  border-color: rgba(254, 55, 50, 1);
+  box-shadow: none;
+}
+.fs-1 {
+  line-height: 75px !important;
+  font-size: 62px !important;
+}
+.fs-2 {
+  line-height: 54px !important;
+  font-size: 50px !important;
+}
+.fs-4 {
+  line-height: 32px !important;
+  font-size: 35px !important;
+}
+.fs-5 {
+  line-height: 30px !important;
+  font-size: 24px !important;
+}
+.fs-6 {
+  line-height: 32px !important;
+  font-size: 20px !important;
 }

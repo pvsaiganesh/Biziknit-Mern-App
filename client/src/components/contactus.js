@@ -7,21 +7,21 @@ import "./contactus.scss";
 
 const ContactUs = () => {
   return (
-    <>
+    <div className="hero">
       <Navbar />
-      <div className="text-center hero p-5">
+      <div className="text-center  p-1 p-md-3">
         <div className="p-3">
-          <p className="fs-2 text-orange-color">Contact Us</p>
+          <p className="fs-2 text-orange-color fw-bolder mb-0">Contact Us</p>
           <p className="fs-4">
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="container shadow p-4 mb-5">
+        <div className="container shadow p-2 p-md-4 mb-5">
           <div className="row">
-            <div className="col-12 col-md-6 text-white contact-info bg-11 text-start p-5">
+            <div className="col-12 col-md-6 text-white contact-info bg-11 text-start p-3 p-md-5">
               <p className="fs-4">Contact Information</p>
-              <p className="fs-5 pb-5">Say something to start a live chat!</p>
-              <p className=" fs-5 pb-5">
+              <p className="fs-6 pb-3">Say something to start a live chat!</p>
+              <p className=" fs-6 pb-3">
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ const ContactUs = () => {
                 </span>
                 +91 7095355556
               </p>
-              <p className="pb-5 fs-5 text-break">
+              <p className="pb-3 fs-6 text-break">
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ const ContactUs = () => {
                 </span>
                 biziknitcommunity@gmail.com
               </p>
-              <p className="pb-5 fs-5">
+              <p className="pb-3 fs-6">
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -72,9 +72,9 @@ const ContactUs = () => {
               </p>
               <Social styles="text-start" />
             </div>
-            <div className="col-12 col-md-6 contact-form text-start p-5">
-              <div class="input-group-sm flex-wrap pb-5">
-                <label htmlFor="fullName" className="form-label fw-bold fs-5">
+            <div className="col-12 col-md-6 contact-form text-start p-3 p-md-5">
+              <div className="input-group-sm flex-wrap pb-3">
+                <label htmlFor="fullName" className="form-label fw-300 fs-6">
                   Full Name
                 </label>
                 <input
@@ -85,8 +85,8 @@ const ContactUs = () => {
                   aria-describedby="addon-wrapping"
                 />
               </div>
-              <div class="input-group-sm flex-wrap pb-5">
-                <label htmlFor="fullName" className="form-label fw-bold fs-5">
+              <div className="input-group-sm flex-wrap pb-3">
+                <label htmlFor="fullName" className="form-label fw-300 fs-6">
                   Phone Number
                 </label>
                 <input
@@ -97,8 +97,8 @@ const ContactUs = () => {
                   aria-describedby="addon-wrapping"
                 />
               </div>
-              <div class="input-group-sm flex-wrap pb-5">
-                <label htmlFor="email" className="form-label fw-bold fs-5">
+              <div className="input-group-sm flex-wrap pb-3">
+                <label htmlFor="email" className="form-label fw-300 fs-6">
                   Email
                 </label>
                 <input
@@ -109,8 +109,8 @@ const ContactUs = () => {
                   aria-describedby="addon-wrapping"
                 />
               </div>
-              <div class="input-group-sm flex-wrap pb-5">
-                <label htmlFor="message" className="form-label fw-bold fs-5">
+              <div className="input-group-sm flex-wrap pb-3">
+                <label htmlFor="message" className="form-label fw-300 fs-6">
                   Message
                 </label>
                 <input
@@ -124,12 +124,12 @@ const ContactUs = () => {
               </div>
               <div className="text-end">
                 <button
-                  className="btn btn-lg   text-white send-message-button p-3  position-relative"
+                  className="btn btn-lg fs-6  text-white bg-button ps-5 pe-5 pt-2 pb-2  position-relative"
                   type="button "
                   id="button-addon2"
                 >
                   Send Message
-                  <span className="top-0 bottom-0 start-0  position-absolute">
+                  <span className="top-30 end-50  position-absolute">
                     <img src={Letter} alt="letter" />
                   </span>
                 </button>
@@ -139,7 +139,7 @@ const ContactUs = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
