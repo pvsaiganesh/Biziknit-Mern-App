@@ -78,8 +78,34 @@ const Login = () => {
               <p className="fs-6 ">Enter your details</p>
               <div className="text-start d-flex flex-column flex-md-row justify-content-start flex-fill">
                 <div className="d-flex flex-column flex-fill">
-                  <InputComp {...ele1} />
-                  <InputComp {...ele2} />
+                  <div className=" p-1 pb-1 ps-1 pe-1 w-100">
+                    <div className="input-group-sm">
+                      <label htmlFor="basic-url" className="form-label">
+                        {ele1.label}
+                      </label>
+                      <input
+                        type={ele1.type}
+                        onChange={ele1.onChange}
+                        className="form-control"
+                        id="username"
+                        aria-describedby="basic-addon3 basic-addon4 button-addon2"
+                      />
+                    </div>
+                  </div>
+                  <div className=" p-1 pb-1 ps-1 pe-1 w-100">
+                    <div className="input-group-sm">
+                      <label htmlFor="basic-url" className="form-label">
+                        {ele2.label}
+                      </label>
+                      <input
+                        type={ele2.type}
+                        onChange={ele2.onChange}
+                        className="form-control"
+                        id="password"
+                        aria-describedby="basic-addon3 basic-addon4 button-addon2"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="mt-3 text-start  ps-2 ">
