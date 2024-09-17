@@ -34,7 +34,7 @@ const RegCard = () => {
         <div
           className="modal fade"
           id="registerModal"
-          tabindex="-1"
+          tabIndex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
@@ -47,7 +47,7 @@ const RegCard = () => {
                       <p className="fs-4 fw-bold">Why You Should Register</p>
                       <ul className="p-0 m-0">
                         <li className="fs-6">
-                          <i class="bi bi-star-fill pe-3"></i>
+                          <i className="bi bi-star-fill pe-3"></i>
                           <span className="fw-bold">
                             Exclusive Coverage:
                           </span>{" "}
@@ -55,7 +55,7 @@ const RegCard = () => {
                           visibility to local clients.
                         </li>
                         <li className="fs-6">
-                          <i class="bi bi-star-fill pe-3"></i>
+                          <i className="bi bi-star-fill pe-3"></i>
                           <span className="fw-bold">
                             Network With Peers:
                           </span>{" "}
@@ -64,7 +64,7 @@ const RegCard = () => {
                           opportunities.
                         </li>
                         <li className="fs-6">
-                          <i class="bi bi-star-fill pe-3"></i>
+                          <i className="bi bi-star-fill pe-3"></i>
                           <span className="fw-bold">
                             Streamlined Lead Generation:
                           </span>{" "}
@@ -72,7 +72,7 @@ const RegCard = () => {
                           quality leads without lifting a finger.
                         </li>
                         <li className="fs-6">
-                          <i class="bi bi-star-fill pe-3"></i>
+                          <i className="bi bi-star-fill pe-3"></i>
                           <span className="fw-bold">
                             Resource Sharing:
                           </span>{" "}

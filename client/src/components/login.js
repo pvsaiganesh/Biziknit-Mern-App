@@ -30,7 +30,7 @@ const Login = () => {
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {
-          navigate("/home");
+          navigate("/");
         } else {
           navigate("/register");
           alert("You are not registered to this service");

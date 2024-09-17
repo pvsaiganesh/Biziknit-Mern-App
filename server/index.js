@@ -68,7 +68,7 @@ app.post("/login", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  EmployeeModel.create(req.body)
+  UserModel.create(req.body)
     .then((employees) => res.json(employees))
     .catch((err) => res.json(err));
 });
