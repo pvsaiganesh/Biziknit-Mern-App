@@ -3,7 +3,7 @@ import "../register.scss";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-datepicker/dist/react-datepicker-cssmodules.css";
 
-const InputComp = ({ label, type, func, onChange }) => {
+const InputComp = ({ label, type, func, onChange, key }) => {
   return (
     <div className=" p-1 pb-1 ps-1 pe-1 w-100">
       <div className="input-group-sm">
@@ -12,11 +12,7 @@ const InputComp = ({ label, type, func, onChange }) => {
         </label>
 
         {type === "select" && (
-          <select
-            className="form-select"
-            onChange={onChange}
-            id="inputGroupSelect01"
-          >
+          <select className="form-select" onChange={onChange} id={key}>
             <option defaultValue></option>
             <option value="1">One</option>
             <option value="2">Two</option>
@@ -28,7 +24,7 @@ const InputComp = ({ label, type, func, onChange }) => {
             type={type}
             onChange={onChange}
             className="form-control"
-            id="basic-url"
+            id={key}
             aria-describedby="basic-addon3 basic-addon4 button-addon2"
           />
         )}
@@ -37,7 +33,7 @@ const InputComp = ({ label, type, func, onChange }) => {
             type={type}
             onChange={onChange}
             className="form-control"
-            id="basic-url-1"
+            id={key}
             aria-describedby="basic-addon3 basic-addon4 button-addon2"
           />
         )}
@@ -46,28 +42,9 @@ const InputComp = ({ label, type, func, onChange }) => {
             type={type}
             onChange={onChange}
             className="form-control"
-            id="basic-url-2"
+            id={key}
             aria-describedby="basic-addon3 basic-addon4 button-addon2"
           />
-        )}
-        {type === "number" && (
-          <div className="input-group mb-3">
-            <input
-              type="number"
-              className="form-control"
-              placeholder="1000"
-              aria-label="Recipient's username"
-              aria-describedby="button-addon2"
-              onChange={onChange}
-            />
-            <button
-              className="btn  bg-button ps-5 pe-5 pt-2 pb-2 text-white"
-              type="button "
-              id="button-addon2"
-            >
-              Pay Now
-            </button>
-          </div>
         )}
       </div>
       {type === "textarea" && (
@@ -76,7 +53,7 @@ const InputComp = ({ label, type, func, onChange }) => {
             onChange={onChange}
             className="form-control"
             placeholder=""
-            id="floatingTextarea"
+            id={key}
           ></textarea>
         </div>
       )}
@@ -88,13 +65,9 @@ const InputComp = ({ label, type, func, onChange }) => {
             onChange={onChange}
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
+            id={key}
           />
-          <button
-            className="btn text-white ps-5 pe-5 pt-2 pb-2 bg-button"
-            onClick={func}
-            type="button "
-            id="button-addon2"
-          >
+          <span class="input-group-text">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -106,15 +79,16 @@ const InputComp = ({ label, type, func, onChange }) => {
               <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
               <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
             </svg>
-          </button>
+          </span>
         </div>
       )}
       {label === "Full Name" && (
         <input
           type={type}
           onChange={onChange}
+          required
           className="form-control"
-          id="basic-url-4"
+          id={key}
           aria-describedby="basic-addon3 basic-addon4 button-addon2"
         />
       )}
@@ -123,7 +97,7 @@ const InputComp = ({ label, type, func, onChange }) => {
           type={type}
           onChange={onChange}
           className="form-control"
-          id="basic-url-5"
+          id={key}
           aria-describedby="basic-addon3 basic-addon4 button-addon2"
         />
       )}
@@ -131,8 +105,9 @@ const InputComp = ({ label, type, func, onChange }) => {
         <input
           type={type}
           onChange={onChange}
+          required
           className="form-control"
-          id="basic-url-6"
+          id={key}
           aria-describedby="basic-addon3 basic-addon4 button-addon2"
         />
       )}
@@ -141,7 +116,7 @@ const InputComp = ({ label, type, func, onChange }) => {
           type={type}
           onChange={onChange}
           className="form-control"
-          id="basic-url-7"
+          id={key}
           aria-describedby="basic-addon3 basic-addon4 button-addon2"
         />
       )}
@@ -150,7 +125,7 @@ const InputComp = ({ label, type, func, onChange }) => {
           type={type}
           onChange={onChange}
           className="form-control"
-          id="basic-url-8"
+          id={key}
           aria-describedby="basic-addon3 basic-addon4 button-addon2"
         />
       )}
@@ -159,10 +134,11 @@ const InputComp = ({ label, type, func, onChange }) => {
           type={type}
           onChange={onChange}
           className="form-control"
-          id="basic-url-9"
+          id={key}
           aria-describedby="basic-addon3 basic-addon4 button-addon2"
         />
       )}
+      <div class="invalid-feedback">Please choose a username.</div>
     </div>
   );
 };

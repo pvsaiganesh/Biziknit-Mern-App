@@ -5,15 +5,15 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 const UserSchema = new mongoose.Schema({
-  fullname: String,
+  fullname: { type: String, required: true },
   nameoffirm: String,
   businesscategory: String,
-  phonenumber: Number,
+  phonenumber: { type: String, required: true, unique: true },
   address: String,
   landmark: String,
   pincode: Number,
   location: String,
-  joiningdate: Date,
+  joiningdate: { type: Date, default: Date.now },
   profilepic: String,
   description: String,
 });

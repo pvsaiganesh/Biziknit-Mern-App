@@ -19,6 +19,7 @@ const Register = () => {
     description: "",
   });
   const ele1 = {
+    key: "1",
     label: "Full Name",
     type: "text",
     onChange: (e) => {
@@ -29,6 +30,7 @@ const Register = () => {
     },
   };
   const ele2 = {
+    key: "2",
     label: "Name of Firm",
     type: "text",
     onChange: (e) => {
@@ -39,6 +41,8 @@ const Register = () => {
     },
   };
   const ele3 = {
+    key: "3",
+
     label: "Business Category",
     type: "select",
     onChange: (e) => {
@@ -49,8 +53,10 @@ const Register = () => {
     },
   };
   const ele4 = {
+    key: "4",
+
     label: "Phone Number",
-    type: "text",
+    type: "number",
     onChange: (e) => {
       setRegisterFormState((prevState) => ({
         ...prevState,
@@ -59,6 +65,8 @@ const Register = () => {
     },
   };
   const ele5 = {
+    key: "5",
+
     label: "Address",
     type: "text",
     onChange: (e) => {
@@ -69,6 +77,8 @@ const Register = () => {
     },
   };
   const ele6 = {
+    key: "6",
+
     label: "Landmark",
     type: "text",
     onChange: (e) => {
@@ -79,6 +89,8 @@ const Register = () => {
     },
   };
   const ele7 = {
+    key: "7",
+
     label: "Pin code",
     type: "text",
     onChange: (e) => {
@@ -89,6 +101,8 @@ const Register = () => {
     },
   };
   const ele8 = {
+    key: "8",
+
     label: "Location Map",
     icon: <i className="bi bi-geo-alt" />,
     type: "location",
@@ -109,6 +123,8 @@ const Register = () => {
     },
   };
   const ele10 = {
+    key: "10",
+
     label: "Joining Date",
     icon: <i className="bi bi-geo-alt" />,
     type: "date",
@@ -126,6 +142,8 @@ const Register = () => {
   //   button: true,
   // };
   const ele12 = {
+    key: "12",
+
     label: "Profile Pic",
     icon: <i className="bi bi-geo-alt" />,
     type: "file",
@@ -137,6 +155,8 @@ const Register = () => {
     },
   };
   const ele13 = {
+    key: "13",
+
     label: "Description",
     icon: <i className="bi bi-geo-alt" />,
     type: "textarea",
@@ -192,7 +212,7 @@ const Register = () => {
         </div>
       </div>
       <div className=" p-5 m-0 d-flex flex-row justify-content-center align-items-center flex-grow-1">
-        <form onSubmit={onFormSubmit}>
+        <form onSubmit={onFormSubmit} className="needs-validation" novalidate>
           <div className="p-4 pt-2 pb-2 text-start border rounded w-100  shadow">
             <p className="fs-3 m-0 ps-2 fw-bold">Register</p>
             <p className="fs-6 m-0 ps-2 pb-4">
