@@ -102,14 +102,17 @@ const InputComp = ({ label, type, func, onChange, key }) => {
         />
       )}
       {label === "Phone Number" && (
-        <input
-          type={type}
-          onChange={onChange}
-          required
-          className="form-control"
-          id={key}
-          aria-describedby="basic-addon3 basic-addon4 button-addon2"
-        />
+        <div className="input-group mb-3">
+          <span class="input-group-text">+91</span>
+          <input
+            type={type}
+            onChange={onChange}
+            required
+            className="form-control"
+            id={key}
+            aria-describedby="basic-addon3 basic-addon4 button-addon2"
+          />
+        </div>
       )}
       {label === "Address" && (
         <input
