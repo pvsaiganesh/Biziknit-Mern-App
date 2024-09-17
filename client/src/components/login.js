@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./login.scss";
-import InputComp from "./register-components/input-comp";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
