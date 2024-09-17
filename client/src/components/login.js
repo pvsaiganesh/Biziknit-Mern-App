@@ -4,13 +4,13 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [phonenumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const ele1 = {
     label: "Phone Number",
-    type: "text",
+    type: "number",
     onChange: (e) => {
-      setUsername(e.target.value);
+      setPhoneNumber(e.target.value);
     },
   };
   const ele2 = {
@@ -25,7 +25,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/login", { username, password })
+      .post("http://localhost:3001/login", { phonenumber, password })
       .then((result) => {
         console.log(result);
         if (result.data === "Success") {

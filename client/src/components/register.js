@@ -152,9 +152,9 @@ const Register = () => {
   const onFormSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/register", registerFormState)
+      .post("http://localhost:3001/register", { ...registerFormState })
       .then((result) => {
-        console.log(result);
+        console.log(JSON.parse(result.config.data));
         navigate("/login");
       })
       .catch((err) => console.log(err));

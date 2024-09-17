@@ -1,9 +1,27 @@
 const express = require("express");
-
+const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+const UserSchema = new mongoose.Schema({
+  fullname: String,
+  nameoffirm: String,
+  businesscategory: String,
+  phonenumber: Number,
+  address: String,
+  landmark: String,
+  pincode: Number,
+  location: String,
+  joiningdate: Date,
+  profilepic: String,
+  description: String,
+});
+
+const UserModel = mongoose.model("user", UserSchema);
+// mongoose.connect(process.env.DATABASE_URI, () => {
+//   console.log("Mongo connected");
+// });
 // app.use(express.static(path.resolve(__dirname, "../client/build")));
 
 app.get("/api", (req, res) => {
@@ -17,46 +35,49 @@ app.get("/api", (req, res) => {
 // All other GET requests not handled before will return our React app
 
 const cors = require("cors");
-const UserModel = require("./modal/registrants");
 
 app.use(express.json());
 app.use(cors());
 
-const { MongoClient, ServerApiVersion } = require("mongodb");
+// const { MongoClient, ServerApiVersion } = require("mongodb");
 const uri = `mongodb+srv://ipvsaiganesh:${encodeURIComponent(
   "Sairam@rjss12"
 )}@biziknitcluster.qi4id.mongodb.net/?retryWrites=true&w=majority&appName=BiziknitCLuster`;
-
+mongoose.connect(uri);
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
+// const client = new MongoClient(uri, {
+//   serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   },
+// });
 
-async function run() {
-  try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log(
-      "Pinged your deployment. You successfully connected to MongoDB!"
-    );
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
+// async function run() {
+//   try {
+//     // Connect the client to the server	(optional starting in v4.7)
+//     await client.connect();
+//     // Send a ping to confirm a successful connection
+//     await client.db("admin").command({ ping: 1 });
+//     console.log(
+//       "Pinged your deployment. You successfully connected to MongoDB!"
+//     );
+//   } catch (e) {
+//     // Ensures that the client will close when you finish/error
+//     // await client.close();
+//     console.log(e);
+//   }
+// }
+// let collection = client.db("Biziknit").collection("Biziknit");
+// run();
 
-app.post("/login", (req, res) => {
+app.post("/login", async (req, res) => {
   const { phonenumber, password } = req.body;
-  UserModel.findOne({ phonenumber: phonenumber }).then((user) => {
+  // console.log(collection.find({ phonenumber }).limit(1));
+  await UserModel.findOne({ phonenumber }).then((user) => {
+    console.log(user, phonenumber);
     if (user) {
-      if (user.password === password) {
+      if (user.phonenumber == phonenumber) {
         res.json("Success");
       } else {
         res.json("The password is incorrect");
@@ -67,9 +88,13 @@ app.post("/login", (req, res) => {
   });
 });
 
-app.post("/register", (req, res) => {
-  UserModel.create(req.body)
-    .then((employees) => res.json(employees))
+app.post("/register", async (req, res) => {
+  // collection.insertOne({ ...req.body });
+
+  await UserModel.create(req.body)
+    .then((employees) => {
+      res.json(employees);
+    })
     .catch((err) => res.json(err));
 });
 
