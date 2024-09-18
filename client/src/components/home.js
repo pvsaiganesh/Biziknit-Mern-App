@@ -14,6 +14,7 @@ import Footer from "./footer.js";
 
 import "./home.scss";
 import Navbar from "./home-components/navbar.js";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -33,12 +34,14 @@ const Home = () => {
                   for you!
                 </p>
                 <p>
-                  <button
-                    type="button"
-                    className="btn btn-outline-light ps-5 pe-5 pt-2 pb-2 fw-bold"
-                  >
-                    Join Now
-                  </button>
+                  <Link to="/register">
+                    <button
+                      type="button"
+                      className="btn btn-outline-light ps-5 pe-5 pt-2 pb-2 fw-bold"
+                    >
+                      Join Now
+                    </button>
+                  </Link>
                 </p>
               </div>
             </div>
