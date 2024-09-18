@@ -81,7 +81,7 @@ app.post("/login", async (req, res) => {
       if (user.phonenumber === phonenumber) {
         res.json("Success");
       } else {
-        res.json("The password is incorrect");
+        res.json("No record existed");
       }
     } else {
       res.json("No record existed");
