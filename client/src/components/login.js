@@ -79,7 +79,7 @@ const Login = () => {
       <div className="p-3  p-md-5 login-container">
         <form onSubmit={handleSubmit}>
           <div className="d-flex flex-row justify-content-center justify-content-md-start align-items-center">
-            <div className="p-3  p-md-5 border-rounded  shadow flex-fill text-center text-md-start ms-5 me-5">
+            <div className="p-3  p-md-5 border-rounded  shadow flex-fill text-center text-md-start ms-md-5 me-md-5">
               <p className="fs-3 m-0 fw-bold headings">Login</p>
               <p className="fs-6 ">Enter your details</p>
               <div className="text-start d-flex flex-column flex-md-row justify-content-start flex-fill">

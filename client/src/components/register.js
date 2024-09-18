@@ -233,7 +233,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <div className=" p-5 m-0 d-flex flex-row justify-content-center align-items-center flex-grow-1">
+      <div className=" p-md-5 m-0 d-flex flex-row justify-content-center align-items-center flex-grow-1">
         <form onSubmit={onFormSubmit}>
           <div className="p-4 pt-2 pb-2 text-start border rounded w-100  shadow">
             <p className="fs-3 m-0 ps-2 fw-bold">Register</p>
