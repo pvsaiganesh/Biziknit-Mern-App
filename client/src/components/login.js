@@ -9,7 +9,7 @@ const Login = () => {
   const ele1 = {
     id: "username",
     label: "Phone Number",
-    type: "number",
+    type: "text",
     onChange: (e) => {
       setPhoneNumber(e.target.value);
     },
@@ -85,10 +85,11 @@ const Login = () => {
               <div className="text-start d-flex flex-column flex-md-row justify-content-start flex-fill">
                 <div className="d-flex flex-column flex-fill">
                   <div className=" p-1 pb-1 ps-1 pe-1 w-100">
-                    <div className="input-group-sm">
-                      <label htmlFor="username" className="form-label">
-                        {ele1.label}
-                      </label>
+                    <label htmlFor="username" className="form-label">
+                      {ele1.label}
+                    </label>
+                    <div className="input-group input-group-sm">
+                      <span className="input-group-text">+91</span>
                       <input
                         type={ele1.type}
                         pattern="[789][0-9]{9}"
@@ -101,10 +102,10 @@ const Login = () => {
                     </div>
                   </div>
                   <div className=" p-1 pb-1 ps-1 pe-1 w-100">
-                    <div className="input-group-sm">
-                      <label htmlFor="password" className="form-label">
-                        {ele2.label}
-                      </label>
+                    <label htmlFor="password" className="form-label">
+                      {ele2.label}
+                    </label>
+                    <div className="input-group input-group-sm">
                       <input
                         type={ele2.type}
                         onChange={ele2.onChange}
