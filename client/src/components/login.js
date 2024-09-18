@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./login.scss";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [phonenumber, setPhoneNumber] = useState("");
@@ -27,12 +27,17 @@ const Login = () => {
     axios
       .post("http://localhost:3001/login", { phonenumber, password })
       .then((result) => {
-        console.log(result);
         if (result.data === "Success") {
           navigate("/");
         } else {
-          navigate("/register");
-          alert("You are not registered to this service");
+          // navigate("/register");
+          if (
+            window.confirm(
+              "You are not registered with Biziknit. Do you want to Register with us."
+            )
+          ) {
+            navigate("/register");
+          }
         }
       })
       .catch((err) => console.log(err));
@@ -73,7 +78,7 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <div className="d-flex flex-row justify-content-center justify-content-md-start align-items-center">
             <div className="p-3  p-md-5 border-rounded  shadow flex-fill text-center text-md-start ms-5 me-5">
-              <p className="fs-3 m-0 fw-bold">Login</p>
+              <p className="fs-3 m-0 fw-bold headings">Login</p>
               <p className="fs-6 ">Enter your details</p>
               <div className="text-start d-flex flex-column flex-md-row justify-content-start flex-fill">
                 <div className="d-flex flex-column flex-fill">
@@ -115,8 +120,10 @@ const Login = () => {
                   Login
                 </button>
                 <p className="pt-3">
-                  Don’t have an Account?{" "}
-                  <span className="text-orange-color">Register</span>
+                  Don’t have an Account?
+                  <Link to="/register" className="text-decoration-none">
+                    <span className="text-orange-color">Register</span>
+                  </Link>
                 </p>
               </div>
             </div>

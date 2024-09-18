@@ -8,7 +8,7 @@ const UserSchema = new mongoose.Schema({
   fullname: { type: String, required: true },
   nameoffirm: String,
   businesscategory: String,
-  phonenumber: { type: String, required: true, unique: true },
+  phonenumber: { type: Number, required: true, unique: true },
   address: String,
   landmark: String,
   pincode: Number,
@@ -16,6 +16,7 @@ const UserSchema = new mongoose.Schema({
   joiningdate: { type: Date, default: Date.now },
   profilepic: String,
   description: String,
+  email: { type: String, required: true, unique: true },
 });
 
 const UserModel = mongoose.model("user", UserSchema);
@@ -77,7 +78,7 @@ app.post("/login", async (req, res) => {
   await UserModel.findOne({ phonenumber }).then((user) => {
     console.log(user, phonenumber);
     if (user) {
-      if (user.phonenumber == phonenumber) {
+      if (user.phonenumber === phonenumber) {
         res.json("Success");
       } else {
         res.json("The password is incorrect");

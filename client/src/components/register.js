@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./register.scss";
 import InputComp from "./register-components/input-comp";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [registerFormState, setRegisterFormState] = useState({
@@ -17,9 +17,12 @@ const Register = () => {
     joiningdate: new Date(),
     profilepic: "",
     description: "",
+    email: "",
   });
   const ele1 = {
-    key: "1",
+    id: "1",
+    required: true,
+
     label: "Full Name",
     type: "text",
     onChange: (e) => {
@@ -30,7 +33,9 @@ const Register = () => {
     },
   };
   const ele2 = {
-    key: "2",
+    id: "2",
+    required: true,
+
     label: "Name of Firm",
     type: "text",
     onChange: (e) => {
@@ -41,8 +46,8 @@ const Register = () => {
     },
   };
   const ele3 = {
-    key: "3",
-
+    id: "3",
+    required: true,
     label: "Business Category",
     type: "select",
     onChange: (e) => {
@@ -53,20 +58,23 @@ const Register = () => {
     },
   };
   const ele4 = {
-    key: "4",
+    id: "4",
+    required: true,
 
     label: "Phone Number",
-    type: "number",
+    pattern: "[789][0-9]{9}",
+    type: "text",
     onChange: (e) => {
       setRegisterFormState((prevState) => ({
         ...prevState,
         phonenumber: e.target.value,
       }));
     },
+    invalidMessage: "Mobile Number does not exist",
   };
   const ele5 = {
-    key: "5",
-
+    id: "5",
+    required: true,
     label: "Address",
     type: "text",
     onChange: (e) => {
@@ -77,8 +85,8 @@ const Register = () => {
     },
   };
   const ele6 = {
-    key: "6",
-
+    id: "6",
+    required: true,
     label: "Landmark",
     type: "text",
     onChange: (e) => {
@@ -89,8 +97,8 @@ const Register = () => {
     },
   };
   const ele7 = {
-    key: "7",
-
+    id: "7",
+    required: true,
     label: "Pin code",
     type: "text",
     onChange: (e) => {
@@ -101,8 +109,8 @@ const Register = () => {
     },
   };
   const ele8 = {
-    key: "8",
-
+    id: "8",
+    required: false,
     label: "Location Map",
     icon: <i className="bi bi-geo-alt" />,
     type: "location",
@@ -123,8 +131,8 @@ const Register = () => {
     },
   };
   const ele10 = {
-    key: "10",
-
+    id: "10",
+    required: true,
     label: "Joining Date",
     icon: <i className="bi bi-geo-alt" />,
     type: "date",
@@ -142,8 +150,8 @@ const Register = () => {
   //   button: true,
   // };
   const ele12 = {
-    key: "12",
-
+    id: "12",
+    required: false,
     label: "Profile Pic",
     icon: <i className="bi bi-geo-alt" />,
     type: "file",
@@ -155,8 +163,8 @@ const Register = () => {
     },
   };
   const ele13 = {
-    key: "13",
-
+    id: "13",
+    required: true,
     label: "Description",
     icon: <i className="bi bi-geo-alt" />,
     type: "textarea",
@@ -174,10 +182,17 @@ const Register = () => {
     axios
       .post("http://localhost:3001/register", { ...registerFormState })
       .then((result) => {
-        console.log(JSON.parse(result.config.data));
         navigate("/login");
       })
       .catch((err) => console.log(err));
+  };
+
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
   };
 
   return (
@@ -200,7 +215,7 @@ const Register = () => {
       </div>
       <div className="d-none d-md-block  bg-3">
         <div className="d-flex flex-column justify-content-center align-items-center h-100">
-          <div className="register-text text-center">
+          <div className="register-text text-center headings">
             <span
               fill="transparent"
               className=" register-text-width"
@@ -212,7 +227,7 @@ const Register = () => {
         </div>
       </div>
       <div className=" p-5 m-0 d-flex flex-row justify-content-center align-items-center flex-grow-1">
-        <form onSubmit={onFormSubmit} className="needs-validation" novalidate>
+        <form onSubmit={onFormSubmit}>
           <div className="p-4 pt-2 pb-2 text-start border rounded w-100  shadow">
             <p className="fs-3 m-0 ps-2 fw-bold">Register</p>
             <p className="fs-6 m-0 ps-2 pb-4">
@@ -220,20 +235,42 @@ const Register = () => {
             </p>
             <div className="container">
               <div className="row">
-                <div className="col-12 col-md-6">
-                  <InputComp {...ele1} />
-                  <InputComp {...ele2} />
-                  <InputComp {...ele3} />
-                  <InputComp {...ele8} />
-                  <InputComp {...ele10} />
-                  <InputComp {...ele12} />
+                <div className="col-12">
+                  <div className="input-group-sm mb-3">
+                    <label htmlFor="email" className="form-label">
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                      onChange={(e) => {
+                        setRegisterFormState((prevState) => ({
+                          ...prevState,
+                          email: e.target.value,
+                        }));
+                      }}
+                      className="form-control"
+                      placeholder="Enter your email"
+                      aria-label="Email"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
                 </div>
                 <div className="col-12 col-md-6">
-                  <InputComp {...ele4} />
-                  <InputComp {...ele5} />
-                  <InputComp {...ele6} />
-                  <InputComp {...ele7} />
-                  <InputComp {...ele13} />
+                  <InputComp key={ele1.id} {...ele1} />
+                  <InputComp key={ele2.id} {...ele2} />
+                  <InputComp key={ele3.id} {...ele3} />
+                  <InputComp key={ele8.id} {...ele8} />
+                  <InputComp key={ele10.id} {...ele10} />
+                  <InputComp key={ele12.id} {...ele12} />
+                </div>
+                <div className="col-12 col-md-6">
+                  <InputComp key={ele4.id} {...ele4} />
+                  <InputComp key={ele5.id} {...ele5} />
+                  <InputComp key={ele6.id} {...ele6} />
+                  <InputComp key={ele7.id} {...ele7} />
+                  <InputComp key={ele13.id} {...ele13} />
                 </div>
               </div>
             </div>
@@ -243,7 +280,9 @@ const Register = () => {
               </button>
               <p className="mt-2">
                 Already have logins!?{" "}
-                <span className="text-orange-color">Login here</span>
+                <Link to="/login" className="text-decoration-none">
+                  <span className="text-orange-color">Login here</span>
+                </Link>
               </p>
             </div>
           </div>
