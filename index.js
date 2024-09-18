@@ -76,9 +76,8 @@ app.post("/login", async (req, res) => {
   const { phonenumber, password } = req.body;
   // console.log(collection.find({ phonenumber }).limit(1));
   await UserModel.findOne({ phonenumber }).then((user) => {
-    console.log(user, phonenumber);
     if (user) {
-      if (user.phonenumber === phonenumber) {
+      if (user.phonenumber == phonenumber) {
         res.json("Success");
       } else {
         res.json("No record existed");

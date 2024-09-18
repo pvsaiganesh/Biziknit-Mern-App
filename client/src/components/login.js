@@ -7,6 +7,7 @@ const Login = () => {
   const [phonenumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const ele1 = {
+    id: "username",
     label: "Phone Number",
     type: "number",
     onChange: (e) => {
@@ -84,7 +85,7 @@ const Login = () => {
                 <div className="d-flex flex-column flex-fill">
                   <div className=" p-1 pb-1 ps-1 pe-1 w-100">
                     <div className="input-group-sm">
-                      <label htmlFor="basic-url" className="form-label">
+                      <label htmlFor="username" className="form-label">
                         {ele1.label}
                       </label>
                       <input
@@ -98,7 +99,7 @@ const Login = () => {
                   </div>
                   <div className=" p-1 pb-1 ps-1 pe-1 w-100">
                     <div className="input-group-sm">
-                      <label htmlFor="basic-url" className="form-label">
+                      <label htmlFor="password" className="form-label">
                         {ele2.label}
                       </label>
                       <input
