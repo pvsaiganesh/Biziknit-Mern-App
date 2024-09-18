@@ -114,7 +114,7 @@ const InputComp = ({ label, type, func, onChange, id, pattern, required }) => {
       )}
       {label === "Phone Number" && (
         <div className="input-group mb-3">
-          <span class="input-group-text">+91</span>
+          <span className="input-group-text">+91</span>
           <input
             type={type}
             pattern={pattern}

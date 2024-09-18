@@ -132,7 +132,7 @@ const Register = () => {
   };
   const ele10 = {
     id: "10",
-    required: true,
+    required: false,
     label: "Joining Date",
     icon: <i className="bi bi-geo-alt" />,
     type: "date",
@@ -164,7 +164,7 @@ const Register = () => {
   };
   const ele13 = {
     id: "13",
-    required: true,
+    required: false,
     label: "Description",
     icon: <i className="bi bi-geo-alt" />,
     type: "textarea",
@@ -183,11 +183,11 @@ const Register = () => {
       .post("http://localhost:3001/register", { ...registerFormState })
       .then((result) => {
         console.log(result);
-        // if (result.data.errorResponse.code === 11000) {
-        //   alert("Phone Number already registered with Biziknit");
-        // } else {
-        //   navigate("/login");
-        // }
+        if (result?.data?.errorResponse?.code === 11000) {
+          alert("Phone Number / Email Id  already registered with Biziknit");
+        } else {
+          navigate("/login");
+        }
       })
       .catch((err) => {
         console.log(err);

@@ -28,9 +28,10 @@ const Login = () => {
     axios
       .post("http://localhost:3001/login", { phonenumber, password })
       .then((result) => {
+        console.log(result);
         if (result.data === "Success") {
           navigate("/");
-        } else {
+        } else if (result.data === "No record existed") {
           // navigate("/register");
           if (
             window.confirm(
@@ -90,9 +91,11 @@ const Login = () => {
                       </label>
                       <input
                         type={ele1.type}
+                        pattern="[789][0-9]{9}"
                         onChange={ele1.onChange}
                         className="form-control"
                         id="username"
+                        required
                         aria-describedby="basic-addon3 basic-addon4 button-addon2"
                       />
                     </div>
