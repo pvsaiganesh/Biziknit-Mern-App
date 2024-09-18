@@ -1,7 +1,5 @@
 import React from "react";
 import "../register.scss";
-import "react-datepicker/dist/react-datepicker.css";
-import "react-datepicker/dist/react-datepicker-cssmodules.css";
 
 const InputComp = ({ label, type, func, onChange, id, pattern, required }) => {
   return (
