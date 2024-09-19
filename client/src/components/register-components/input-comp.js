@@ -13,7 +13,7 @@ const InputComp = ({ label, type, func, onChange, id, pattern, required }) => {
         {type === "select" && (
           <>
             <input
-              class="form-control"
+              className="form-control"
               list="datalistOptions"
               id="exampleDataList"
               placeholder="Type to search..."
