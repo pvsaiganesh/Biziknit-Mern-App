@@ -611,3 +611,434 @@ export const testimonials = [
     testiImg: testiImg3,
   },
 ];
+
+export const businessCategories = [
+  {
+    id: 1,
+    name: "Tiles",
+  },
+  {
+    id: 2,
+    name: "Architect",
+  },
+  {
+    id: 5,
+    name: "Pest Control",
+  },
+  {
+    id: 6,
+    name: "Mobiles",
+  },
+  {
+    id: 7,
+    name: "Lifts",
+  },
+  {
+    id: 8,
+    name: "Paints",
+  },
+  {
+    id: 9,
+    name: "Car Accessories",
+  },
+  {
+    id: 10,
+    name: "Grocery",
+  },
+  {
+    id: 11,
+    name: "Play school",
+  },
+  {
+    id: 12,
+    name: "Nutritionist",
+  },
+  {
+    id: 13,
+    name: "Homeo Doctor",
+  },
+  {
+    id: 14,
+    name: "Training and Education",
+  },
+  {
+    id: 15,
+    name: "Home Appliances",
+  },
+  {
+    id: 16,
+    name: "Training institutes",
+  },
+  {
+    id: 17,
+    name: "Surveyor",
+  },
+  {
+    id: 19,
+    name: "Waterproofing Contractors",
+  },
+  {
+    id: 20,
+    name: "Hospital",
+  },
+  {
+    id: 21,
+    name: "Opticals",
+  },
+  {
+    id: 22,
+    name: "Medical Equipments",
+  },
+  {
+    id: 23,
+    name: "Gifts",
+  },
+  {
+    id: 24,
+    name: "Home Automation",
+  },
+  {
+    id: 26,
+    name: "Book shop",
+  },
+  {
+    id: 27,
+    name: "Foot wear",
+  },
+  {
+    id: 28,
+    name: "Diagnostics",
+  },
+  {
+    id: 29,
+    name: "Sports equipment",
+  },
+  {
+    id: 30,
+    name: "Automobiles",
+  },
+  {
+    id: 31,
+    name: "Courier Service",
+  },
+  {
+    id: 33,
+    name: "Dermatologist",
+  },
+  {
+    id: 33,
+    name: "Fire fighting equipment",
+  },
+  {
+    id: 34,
+    name: "Musical Instruments",
+  },
+  {
+    id: 35,
+    name: "Restaurant",
+  },
+  {
+    id: 36,
+    name: "Super Market",
+  },
+  {
+    id: 37,
+    name: "Electronics",
+  },
+  {
+    id: 38,
+    name: "Sanitary",
+  },
+  {
+    id: 39,
+    name: "Car Rentals",
+  },
+  {
+    id: 40,
+    name: "Anchor",
+  },
+  {
+    id: 41,
+    name: "Coorpate gifts",
+  },
+  {
+    id: 42,
+    name: "Preowned cars",
+  },
+  {
+    id: 44,
+    name: "Furiture",
+  },
+  {
+    id: 45,
+    name: "Glass",
+  },
+  {
+    id: 46,
+    name: "Builder",
+  },
+  {
+    id: 47,
+    name: "Wedding Cards",
+  },
+  {
+    id: 48,
+    name: "Water treatment",
+  },
+  {
+    id: 49,
+    name: "rental spaces",
+  },
+  {
+    id: 50,
+    name: "Kitchen appliances",
+  },
+  {
+    id: 51,
+    name: "Mobiles and accessories.",
+  },
+  {
+    id: 52,
+    name: "Spa and saloon",
+  },
+  {
+    id: 53,
+    name: "Structral Enginner",
+  },
+  {
+    id: 54,
+    name: "Fire and safety",
+  },
+  {
+    id: 55,
+    name: "Importer(shipping)",
+  },
+  {
+    id: 56,
+    name: "Plastic house holds",
+  },
+  {
+    id: 57,
+    name: "Car accessories",
+  },
+  {
+    id: 58,
+    name: "Home automation",
+  },
+  {
+    id: 59,
+    name: "Marbles and granite",
+  },
+  {
+    id: 60,
+    name: "Testing Labourties (labs)",
+  },
+  {
+    id: 61,
+    name: "Core cutting",
+  },
+  {
+    id: 62,
+    name: "ISO Certification",
+  },
+  {
+    id: 63,
+    name: "Water proofing",
+  },
+  {
+    id: 64,
+    name: "Sculptor or artist",
+  },
+  {
+    id: 65,
+    name: "Pharmacy",
+  },
+  {
+    id: 66,
+    name: "Painting Contracter",
+  },
+  {
+    id: 67,
+    name: "Pest control",
+  },
+  {
+    id: 68,
+    name: "Robotics",
+  },
+  {
+    id: 69,
+    name: "Plumbing",
+  },
+  {
+    id: 70,
+    name: "Eye care/Eye hospital",
+  },
+  {
+    id: 71,
+    name: "Sounds/DJ",
+  },
+  {
+    id: 72,
+    name: "Home tuitions",
+  },
+  {
+    id: 73,
+    name: "Sport academy",
+  },
+  {
+    id: 74,
+    name: "Landscaping",
+  },
+  {
+    id: 75,
+    name: "Oversees education",
+  },
+  {
+    id: 76,
+    name: "Yoga trainer",
+  },
+  {
+    id: 77,
+    name: "Sign boards",
+  },
+  {
+    id: 78,
+    name: "Beverages",
+  },
+  {
+    id: 79,
+    name: "Astrology",
+  },
+  {
+    id: 80,
+    name: "Drinks and beverages",
+  },
+  {
+    id: 81,
+    name: "Generaters",
+  },
+  {
+    id: 82,
+    name: "Events",
+  },
+  {
+    id: 83,
+    name: "Acupuncture",
+  },
+  {
+    id: 84,
+    name: "Velding and fabrication",
+  },
+  {
+    id: 85,
+    name: "plastic house holds",
+  },
+  {
+    id: 86,
+    name: "Uniforms",
+  },
+  {
+    id: 87,
+    name: "Import’s and Exports",
+  },
+  {
+    id: 88,
+    name: "security &House keeping",
+  },
+  {
+    id: 89,
+    name: "Tyres",
+  },
+  {
+    id: 90,
+    name: "pet & pet Suplies",
+  },
+  {
+    id: 91,
+    name: "Packers and mover",
+  },
+  {
+    id: 92,
+    name: "Gymnasium",
+  },
+  {
+    id: 93,
+    name: "Baby car",
+  },
+  {
+    id: 94,
+    name: "Watch store",
+  },
+  {
+    id: 95,
+    name: "Borewells’s Contracter",
+  },
+  {
+    id: 96,
+    name: "Bakery",
+  },
+  {
+    id: 97,
+    name: "Ayurvedic doctor",
+  },
+  {
+    id: 98,
+    name: "Children specialist doctor",
+  },
+  {
+    id: 99,
+    name: "Cosmetic surgeon",
+  },
+  {
+    id: 100,
+    name: "Florist",
+  },
+  {
+    id: 101,
+    name: "Kitchen appliances",
+  },
+  {
+    id: 102,
+    name: "Playback singers",
+  },
+  {
+    id: 103,
+    name: "Veterinary doctor or clinic",
+  },
+  {
+    id: 104,
+    name: "PG, Hostels and rooms",
+  },
+  {
+    id: 105,
+    name: "Resorts",
+  },
+  {
+    id: 106,
+    name: "Foreign exchange",
+  },
+  {
+    id: 107,
+    name: "General surgeons",
+  },
+  {
+    id: 108,
+    name: "Gynaecologist",
+  },
+  {
+    id: 109,
+    name: "Matrimonial",
+  },
+  {
+    id: 110,
+    name: "Opticians",
+  },
+  {
+    id: 111,
+    name: "Painting contractor’s",
+  },
+  {
+    id: 112,
+    name: "Repairs and services",
+  },
+];
