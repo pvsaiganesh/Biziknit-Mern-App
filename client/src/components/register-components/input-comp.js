@@ -1,5 +1,6 @@
 import React from "react";
 import "../register.scss";
+import { businessCategories } from "../constants";
 
 const InputComp = ({ label, type, func, onChange, id, pattern, required }) => {
   return (
@@ -10,17 +11,19 @@ const InputComp = ({ label, type, func, onChange, id, pattern, required }) => {
         </label>
 
         {type === "select" && (
-          <select
-            className="form-select"
-            onChange={onChange}
-            id={id}
-            required={required}
-          >
-            <option defaultValue></option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+          <>
+            <input
+              class="form-control"
+              list="datalistOptions"
+              id="exampleDataList"
+              placeholder="Type to search..."
+            />
+            <datalist id="datalistOptions">
+              {businessCategories.map((item) => (
+                <option id={item.id} value={item.name} />
+              ))}
+            </datalist>
+          </>
         )}
         {type === "file" && (
           <input
