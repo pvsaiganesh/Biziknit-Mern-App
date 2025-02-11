@@ -1,0 +1,57 @@
+.register-text {
+  transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3) !important;
+  color: transparent;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  vertical-align: middle;
+  font-weight: 600;
+  font-family: "Open Sans";
+  line-height: 245px;
+  opacity: 0.5;
+}
+
+.horizotnal-register-text {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3) !important;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.bg-3 {
+  background: linear-gradient(101.48deg, #fe3732 30.86%, #fa5209 70.68%);
+  width: 30%;
+}
+
+.register-text-width {
+  font-size: 10rem !important;
+}
+
+.text-orange-color {
+  color: rgb(254, 55, 50);
+}
+
+.horizontal-register-text {
+  transform: rotate(0deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3) !important;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  vertical-align: middle;
+  opacity: 0.5;
+}
+
+.login-container {
+  width: 55%;
+  max-width: 600px;
+}
+
+@media screen and (max-width: 780px) {
+  .register-text-width {
+    font-size: 4rem !important;
+  }
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+  }
+}/*# sourceMappingURL=login.css.map */

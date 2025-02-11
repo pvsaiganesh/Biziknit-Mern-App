@@ -1,0 +1,14 @@
+.bg-11 {
+  background-image: url(../assets/bg-11.svg);
+  background-size: cover;
+}
+
+.contact-form-input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.send-message-button {
+  background-color: rgb(254, 55, 50);
+  font-size: 1.5rem !important;
+}/*# sourceMappingURL=contactus.css.map */

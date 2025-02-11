@@ -1,0 +1,13 @@
+.navbar {
+  background: linear-gradient(101.48deg, #fe3732 30.86%, #fa5209 70.68%);
+  position: relative;
+  top: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  z-index: 2;
+}/*# sourceMappingURL=navbar.css.map */

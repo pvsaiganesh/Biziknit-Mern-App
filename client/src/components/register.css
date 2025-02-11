@@ -1,0 +1,48 @@
+.register-text {
+  transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3) !important;
+  color: transparent;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  vertical-align: middle;
+  font-weight: 100;
+  font-family: "Open Sans";
+  opacity: 0.5;
+}
+
+.bg-3 {
+  background: linear-gradient(101.48deg, #fe3732 30.86%, #fa5209 70.68%);
+  width: 30%;
+}
+
+.bg-button {
+  background-color: rgb(254, 55, 50);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.register-text-width {
+  font-size: 10rem !important;
+}
+
+.text-orange-color {
+  color: rgb(254, 55, 50);
+}
+
+.horizontal-register-text {
+  transform: rotate(0deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3) !important;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  vertical-align: middle;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 680px) {
+  .register-text-width {
+    font-size: 4rem !important;
+  }
+}/*# sourceMappingURL=register.css.map */

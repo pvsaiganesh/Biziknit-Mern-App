@@ -1,0 +1,10 @@
+.bg-8 {
+  background-image: url(../assets/blogs.svg);
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-8 svg {
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=blogs.css.map */
